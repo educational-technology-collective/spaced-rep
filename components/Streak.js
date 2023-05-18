@@ -4,7 +4,7 @@ export default function Streak(props) {
   return (
     <Text style={styles.texts}>
       Streak Days: {props.number}{" "}
-      <FontAwesome5Icon name="fire-alt" color="red" size={25} />
+      <FontAwesome5Icon name="fire-alt" color="red" size={25}/>
     </Text>
   );
 }

@@ -1,47 +1,15 @@
-import { SafeAreaView } from "react-native-safe-area-context";
-import TopBar from "../components/TopBar";
-import Streak from "../components/Streak";
-import ProgressBar from "../components/ProgressBar"
-import { StyleSheet, View, Text } from "react-native";
+import { createStackNavigator } from "@react-navigation/stack";
+import LearnScreenMain from "./LearnScreenMain";
+import LearnScreenCard from "./LearnScreenCard";
+import CardHeader from "../components/CardHeader";
 
-export default function LearnScreen() {
-  return (
-    <View style={styles.container}>
-      <View style={styles.top}>
-        <TopBar />
-      </View>
-
-      <View style = {styles.streak}>
-       <Streak number = {2} />
-      </View>
-
-      <View style = {styles.progressBar}>
-        <ProgressBar number={40}/>
-      </View>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column'
-  },
-  top: {
-    flex: 1,
-    backgroundColor: "#0056D2",
-  },
-
-  streak: {
-    flex: 4,
-    paddingTop: 20,
-    justifyContent: 'center',
-    alignItems:'center'
-  },
-
-  progressBar: {
-    flex: 5,
-    justifyContent: 'center'
-
-  }
-});
+export default function LearnScreen()
+{
+  const Stack = createStackNavigator();
+  return(
+    <Stack.Navigator>
+      <Stack.Screen name = 'LearnScreenMain' component = {LearnScreenMain} options={{headerShown: false}}/>
+      <Stack.Screen name = 'LearnScreenCard' component = {LearnScreenCard} options={{header: () => <CardHeader done = {20} total = {30}/>}}/>
+    </Stack.Navigator>
+  )
+};

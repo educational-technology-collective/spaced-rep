@@ -1,18 +1,12 @@
 const flashCard = function (
-  id,
+  index,
   type,
   seenTimes,
   timeStamp,
   timeInterval,
   content
 ) {
-  const id = id;
-  const type = type;
-  const seenTimes = seenTimes;
-  const timeStamp = timeStamp;
-  const timeInterval = timeInterval;
-  const content = content;
-  return { id, type, seenTimes, timeStamp, timeInterval, content };
+  return { index, type, seenTimes, timeStamp, timeInterval, content };
 };
 
 const cardCollection = [

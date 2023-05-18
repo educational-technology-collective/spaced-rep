@@ -39,7 +39,7 @@ export default function App() {
         
       })}
      >
-        <Tab.Screen name="Learn" component={LearnScreen}/>
+        <Tab.Screen name="Learn" component={LearnScreen} />
 
         <Tab.Screen name="Collaboration" component={CollaborationScreen} />
 
