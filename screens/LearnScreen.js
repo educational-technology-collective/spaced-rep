@@ -3,13 +3,21 @@ import LearnScreenMain from "./LearnScreenMain";
 import LearnScreenCard from "./LearnScreenCard";
 import CardHeader from "../components/CardHeader";
 
-export default function LearnScreen()
-{
+export default function LearnScreen() {
   const Stack = createStackNavigator();
-  return(
+  return (
     <Stack.Navigator>
-      <Stack.Screen name = 'LearnScreenMain' component = {LearnScreenMain} options={{headerShown: false}}/>
-      <Stack.Screen name = 'LearnScreenCard' component = {LearnScreenCard} options={{header: () => <CardHeader done = {20} total = {30}/>}}/>
+      {/* Stack Navigator that jumps to card screen from main screen */}
+      <Stack.Screen
+        name="LearnScreenMain"
+        component={LearnScreenMain}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="LearnScreenCard"
+        component={LearnScreenCard}
+        options={{ header: () => <CardHeader done={20} total={30} /> }}
+      />
     </Stack.Navigator>
-  )
-};
+  );
+}
