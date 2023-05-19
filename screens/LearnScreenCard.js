@@ -1,13 +1,9 @@
-import {Text, View, SafeAreaView} from 'react-native'
-import QACard from '../components/QACard';
-import {cardCollection} from '../exampleData'
-export default function LearnScreenCard()
-{
-  
+import { Text, View, SafeAreaView } from "react-native";
+import QACard from "../components/QACard";
+import { cardCollection } from "../exampleData";
 
+export default function LearnScreenCard() {
+  const f1 = cardCollection[0];
 
-  return(
-    <QACard />
-  );
-};
-
+  return <QACard obj={f1} />;
+}

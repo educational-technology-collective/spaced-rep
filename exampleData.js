@@ -9,7 +9,7 @@ const flashCard = function (
   return { index, type, seenTimes, timeStamp, timeInterval, content };
 };
 
-const cardCollection = [
+export const cardCollection = [
   flashCard(1, "qa", 1, "2:03", 2, {
     question: "How to define a function in python",
     answer: "def func()",
