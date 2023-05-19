@@ -1,13 +1,6 @@
 import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
-import {
-  View,
-  TextInput,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-} from "react-native";
-import { Modal } from "react-native-paper";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import SelfEvaluation from "./SelfEvaluation";
 import SeenTimesComp from "./SeenTimesComp";
 import InputBox from "./InputBox";
@@ -60,8 +53,10 @@ export default function QACard(props) {
       {/* Component For How Many Times Have Seen */}
       <SeenTimesComp obj={props.obj} />
 
+      {/* Component For the TextInput Box */}
       <InputBox />
 
+      {/* Component For the Four Levels of Indication Section */}
       <View style={styles.modal}>{showEval ? <SelfEvaluation /> : null}</View>
     </LinearGradient>
   );

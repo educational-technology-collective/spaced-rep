@@ -3,10 +3,7 @@ import {
   Text,
   SafeAreaView,
   StyleSheet,
-  Pressable,
-  Touchable,
   TouchableOpacity,
-  Button,
 } from "react-native";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import { useNavigation } from "@react-navigation/native";

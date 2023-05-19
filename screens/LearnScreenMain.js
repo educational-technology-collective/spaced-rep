@@ -1,8 +1,6 @@
-import { SafeAreaView } from "react-native-safe-area-context";
 import TopBar from "../components/TopBar";
-import Streak from "../components/Streak";
 import ProgressBar from "../components/ProgressBar";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View } from "react-native";
 import StartButton from "../components/StartButton";
 import IntroName from "../components/IntroName";
 import { LinearGradient } from "expo-linear-gradient";
