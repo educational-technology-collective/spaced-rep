@@ -17,7 +17,7 @@ export default function SelfEvaluation() {
 
 const styles = StyleSheet.create({
   evaluationContainer: {
-    flex: 1,
+    flex: 2,
   },
   headerText: {
     flex: 1,

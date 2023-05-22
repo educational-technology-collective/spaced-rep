@@ -13,7 +13,7 @@ export default function SeenTimesComp(props) {
 const styles = StyleSheet.create({
   seenTimes: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: 'center'
   },
 
   seenText: {

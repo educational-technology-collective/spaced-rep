@@ -1,7 +1,7 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import LearnScreenMain from "./LearnScreenMain";
 import LearnScreenCard from "./LearnScreenCard";
-import CardHeader from "../components/CardHeader";
+import CardHeader from "../CardComponent/CardHeader";
 
 export default function LearnScreen() {
   const Stack = createStackNavigator();
