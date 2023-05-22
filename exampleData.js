@@ -17,7 +17,7 @@ export const cardCollection = [
 
   flashCard(2, "qaimg", 1, "3:03", 3, {
     imgURL:
-      "https://www.freecodecamp.org/news/content/images/2020/11/serverCode_foR_1.png",
+    'https://www.freecodecamp.org/news/content/images/2020/11/serverCode_foR_1.png',
     question: "This image is an example of",
     answer: "Recursion in python",
   }),

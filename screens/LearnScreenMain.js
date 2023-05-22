@@ -1,8 +1,8 @@
-import TopBar from "../components/TopBar";
-import ProgressBar from "../components/ProgressBar";
+import TopBar from "../LearnScreenMainComp/TopBar";
+import ProgressBar from "../LearnScreenMainComp/ProgressBar";
 import { StyleSheet, View } from "react-native";
-import StartButton from "../components/StartButton";
-import IntroName from "../components/IntroName";
+import StartButton from "../LearnScreenMainComp/StartButton";
+import IntroName from "../LearnScreenMainComp/IntroName";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function LearnScreenMain() {

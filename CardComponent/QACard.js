@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   questionBox: {
-    flex: 2,
+    flex: 1,
     marginTop: 30,
     marginHorizontal: 20,
     borderWidth: 3,
