@@ -1,26 +1,26 @@
-import {View, TouchableOpacity, Text, StyleSheet} from 'react-native'
-import {useState} from 'react'
+import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import { useState } from "react";
 
-export default function IncorrectCard(props)
-{
+export default function IncorrectCard(props) {
   const [boxStyle, setStyle] = useState(styles.answerBox);
-  function onPressHandler()
-  {
+  function onPressHandler() {
     props.setCorrectHandler();
     setStyle(styles.incorrectBox);
   }
   return (
-  <TouchableOpacity style = {boxStyle} onPress = {onPressHandler} disabled = {props.showEval}>
-    <Text style = {styles.text}>
-      <Text style = {{color: "#0056D2"}}>{props.letter}. </Text>
-      <Text >{props.choice.option} </Text>
-    </Text>
-  </TouchableOpacity>
-
-  )
-};
+    <TouchableOpacity
+      style={boxStyle}
+      onPress={onPressHandler}
+      disabled={props.showEval}
+    >
+      <Text style={styles.text}>
+        <Text style={{ color: "#0056D2" }}>{props.letter}. </Text>
+        <Text>{props.choice.option} </Text>
+      </Text>
+    </TouchableOpacity>
+  );
+}
 const styles = StyleSheet.create({
- 
   answerBox: {
     flex: 1,
     borderRadius: 5,
@@ -36,14 +36,13 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     marginHorizontal: 20,
     marginTop: 5,
-    backgroundColor: '#FF7477'
+    backgroundColor: "#FF7477",
   },
 
   text: {
     fontSize: 18,
-    fontWeight: 'bold',
-  
+    fontWeight: "bold",
+
     padding: 15,
   },
- 
-})
+});
