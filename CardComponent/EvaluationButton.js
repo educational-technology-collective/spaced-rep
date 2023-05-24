@@ -1,8 +1,15 @@
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
 export default function EvaluationButton(props) {
+
+  function onPressHandler()
+  {
+    props.chooseLevel.evaluationClick(props.index);
+    props.nextCard();
+  }
+
   return (
-    <TouchableOpacity onPress={() => {}}>
+    <TouchableOpacity onPress={onPressHandler}>
       <View style={styles.buttonContainer}>
         <Text style={styles.text}>{props.text}</Text>
       </View>

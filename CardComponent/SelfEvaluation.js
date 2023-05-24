@@ -1,15 +1,15 @@
 import { View, Text, StyleSheet } from "react-native";
 import EvaluationButton from "./EvaluationButton";
 
-export default function SelfEvaluation() {
+export default function SelfEvaluation(props) {
   return (
     <View style={styles.evaluationContainer}>
       <Text style={styles.headerText}>Confidence Level Indication</Text>
       <View style={styles.buttons}>
-        <EvaluationButton text="Forget" />
-        <EvaluationButton text="Little" />
-        <EvaluationButton text="Much" />
-        <EvaluationButton text="Well" />
+        <EvaluationButton text="Forget" index = {0} chooseLevel = {props.chooseLevel} nextCard = {props.nextCard}/>
+        <EvaluationButton text="Little" index = {1} chooseLevel = {props.chooseLevel} nextCard = {props.nextCard}/>
+        <EvaluationButton text="Much"  index = {2} chooseLevel = {props.chooseLevel} nextCard = {props.nextCard}/>
+        <EvaluationButton text="Well" index = {3} chooseLevel = {props.chooseLevel} nextCard = {props.nextCard}/>
       </View>
     </View>
   );

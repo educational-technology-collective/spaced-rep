@@ -7,8 +7,10 @@ import {
 } from "react-native";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import { useNavigation } from "@react-navigation/native";
+import { useRoute } from '@react-navigation/native';
 export default function CardHeader(props) {
   const navigation = useNavigation();
+  const route = useRoute();
   function backHandler() {
     navigation.navigate("LearnScreenMain");
   }
@@ -23,11 +25,11 @@ export default function CardHeader(props) {
           </Text>
         </TouchableOpacity>
       </View>
-      <View style={styles.textView}>
+       <View style={styles.textView}>
         <Text style={styles.text}>
-          {props.done} / {props.total} cards
-        </Text>
-      </View>
+          {route.params.stats.finished} / {route.params.stats.total} cards
+        </Text> 
+      </View> 
     </SafeAreaView>
   );
 }

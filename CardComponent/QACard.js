@@ -57,7 +57,7 @@ export default function QACard(props) {
       <InputBox />
 
       {/* Component For the Four Levels of Indication Section */}
-      <View style={styles.modal}>{showEval ? <SelfEvaluation /> : null}</View>
+      <View style={styles.modal}>{showEval ? <SelfEvaluation chooseLevel = {props.chooseLevel} nextCard = {props.nextCard}/> : null}</View>
     </LinearGradient>
   );
 }
