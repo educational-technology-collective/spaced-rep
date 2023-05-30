@@ -1,9 +1,14 @@
-import {View, Text, StyleSheet, SafeAreaView, TouchableOpacity} from 'react-native'
-import {useNavigation} from '@react-navigation/native'
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import {
+  View,
+  Text,
+  StyleSheet,
+  SafeAreaView,
+  TouchableOpacity,
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 
-export default function StatisticsHeader()
-{
+export default function StatisticsHeader() {
   const navigation = useNavigation();
 
   function backHandler() {
@@ -20,15 +25,12 @@ export default function StatisticsHeader()
           </Text>
         </TouchableOpacity>
       </View>
-       <View style={styles.textView}>
-        <Text style={styles.text}>
-         Summary
-        </Text> 
-      </View> 
+      <View style={styles.textView}>
+        <Text style={styles.text}>Summary</Text>
+      </View>
     </SafeAreaView>
   );
-};
-
+}
 
 const styles = StyleSheet.create({
   text: {
@@ -47,10 +49,8 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: 10,
   },
-  
+
   textView: {
-    marginLeft: 155
+    marginLeft: 155,
   },
 });
-
-

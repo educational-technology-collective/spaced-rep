@@ -6,10 +6,10 @@ export default function SelfEvaluation(props) {
     <View style={styles.evaluationContainer}>
       <Text style={styles.headerText}>Confidence Level Indication</Text>
       <View style={styles.buttons}>
-        <EvaluationButton text="Forget" index = {0} chooseLevel = {props.chooseLevel} nextCard = {props.nextCard}/>
-        <EvaluationButton text="Little" index = {1} chooseLevel = {props.chooseLevel} nextCard = {props.nextCard}/>
-        <EvaluationButton text="Much"  index = {2} chooseLevel = {props.chooseLevel} nextCard = {props.nextCard}/>
-        <EvaluationButton text="Well" index = {3} chooseLevel = {props.chooseLevel} nextCard = {props.nextCard}/>
+        <EvaluationButton text="Forget" index={0} nextCard={props.nextCard} />
+        <EvaluationButton text="Little" index={1} nextCard={props.nextCard} />
+        <EvaluationButton text="Much" index={2} nextCard={props.nextCard} />
+        <EvaluationButton text="Well" index={3} nextCard={props.nextCard} />
       </View>
     </View>
   );

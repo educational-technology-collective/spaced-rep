@@ -4,11 +4,11 @@ import { StyleSheet, View } from "react-native";
 import StartButton from "../LearnScreenMainComp/StartButton";
 import IntroName from "../LearnScreenMainComp/IntroName";
 import { LinearGradient } from "expo-linear-gradient";
-import { useRoute } from '@react-navigation/native';
+import { useRoute } from "@react-navigation/native";
 
 export default function LearnScreenMain() {
-  
   const route = useRoute();
+  const stats = route.params.stats;
 
   return (
     <LinearGradient
@@ -32,12 +32,12 @@ export default function LearnScreenMain() {
 
       {/* The Progress Bar Portion */}
       <View style={styles.progressBar}>
-        <ProgressBar number={route.params.stats.total - route.params.stats.finished} width={"60%"} />
+        <ProgressBar number={stats.total - stats.finished} width={"60%"} />
       </View>
 
       {/* The Button used to jump to the card screen */}
       <View style={styles.button}>
-        <StartButton finished={true}/>
+        <StartButton finished={stats.finished === stats.total ? true : false} />
       </View>
     </LinearGradient>
   );

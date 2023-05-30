@@ -1,7 +1,6 @@
 import {View, Text, StyleSheet} from 'react-native'
 import { LinearGradient } from "expo-linear-gradient";
 import { useNavigation, useRoute } from "@react-navigation/native";
-import IndicationBlock from '../StatisticsComp/IndicationBlock';
 import ReviewIndication from '../StatisticsComp/ReviewIndication';
 import { useEffect } from 'react';
 
@@ -10,6 +9,7 @@ export default function StatisticsScreen()
 {
   const navigation = useNavigation();
   const route = useRoute();
+  const stats = route.params.stats;
 
   useEffect(() => {
     const { routes } = navigation.getState();
@@ -48,7 +48,7 @@ export default function StatisticsScreen()
     <Text></Text>
     </View> 
     <Text style = {styles.groupText}>
-      <Text style = {styles.numberText}>{route.params.stats.finished}</Text>
+      <Text style = {styles.numberText}>{stats.finished}</Text>
       <Text style = {styles.cardText}> Cards</Text>
     </Text>
 

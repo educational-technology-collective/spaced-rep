@@ -1,10 +1,39 @@
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-
+import { useRoute, useNavigation } from "@react-navigation/native";
 export default function EvaluationButton(props) {
+  const route = useRoute();
+  const stats = route.params.stats;
+  const navigation = useNavigation();
 
-  function onPressHandler()
-  {
-    props.chooseLevel.evaluationClick(props.index);
+  function evaluationClick(index) {
+    switch (index) {
+      case 0:
+        stats.forgetNum++;
+        stats.finished++;
+        navigation.setParams({ stats: stats });
+        break;
+
+      case 1:
+        stats.littleNum++;
+        stats.finished++;
+        navigation.setParams({ stats: stats });
+        break;
+      case 2:
+        stats.muchNum++;
+        stats.finished++;
+        navigation.setParams({ stats: stats });
+        break;
+
+      case 3:
+        stats.wellNum++;
+        stats.finished++;
+        navigation.setParams({ stats: stats });
+        break;
+    }
+  }
+
+  function onPressHandler() {
+    evaluationClick(props.index);
     props.nextCard();
   }
 

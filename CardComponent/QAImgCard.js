@@ -11,7 +11,7 @@ export default function QAImgCard(props) {
         />
       </View>
       <View style={styles.card}>
-        <QACard obj={props.obj} chooseLevel = {props.chooseLevel} nextCard = {props.nextCard}/>
+        <QACard obj={props.obj} nextCard={props.nextCard} />
       </View>
     </View>
   );

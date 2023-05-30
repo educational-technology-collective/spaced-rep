@@ -2,12 +2,12 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 export default function StartButton(props) {
   const navigation = useNavigation();
+
   function reviewCardHandler() {
     navigation.navigate("LearnScreenCard");
   }
 
-  function statisticsHandler()
-  {
+  function statisticsHandler() {
     navigation.navigate("StatisticsScreen");
   }
 
@@ -20,13 +20,13 @@ export default function StartButton(props) {
       </TouchableOpacity>
     );
   }
-  return(
+  return (
     <TouchableOpacity onPress={statisticsHandler}>
-        <View style={styles.button}>
-          <Text style={styles.text}>Today's Statistics</Text>
-        </View>
-      </TouchableOpacity>
-  )
+      <View style={styles.button}>
+        <Text style={styles.text}>Today's Statistics</Text>
+      </View>
+    </TouchableOpacity>
+  );
 }
 
 const styles = StyleSheet.create({

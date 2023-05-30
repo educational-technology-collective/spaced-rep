@@ -1,38 +1,30 @@
-import {View, TouchableOpacity, Text, StyleSheet} from 'react-native'
-import {useState} from 'react'
+import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
+import { useState } from "react";
 
-export default function MCQIndChoice(props)
-{
+export default function MCQIndChoice(props) {
   const [boxStyle, setStyle] = useState(styles.answerBox);
-  function onPressHandler()
-  {
+  function onPressHandler() {
     props.choiceHandler();
-    if(props.isCorrect)
-    {
+    if (props.isCorrect) {
       setStyle(styles.correctBox);
-    }
-    else
-    {
+    } else {
       setStyle(styles.incorrectBox);
-
     }
   }
   return (
-  <TouchableOpacity style = {boxStyle} onPress = {onPressHandler}>
-    <Text style = {styles.text}>
-      <Text style = {{color: "#0056D2"}}>{props.letter}. </Text>
-      <Text >{props.choice.option} </Text>
-    </Text>
-  </TouchableOpacity>
-
-  )
-};
+    <TouchableOpacity style={boxStyle} onPress={onPressHandler}>
+      <Text style={styles.text}>
+        <Text style={{ color: "#0056D2" }}>{props.letter}. </Text>
+        <Text>{props.choice.option} </Text>
+      </Text>
+    </TouchableOpacity>
+  );
+}
 
 const styles = StyleSheet.create({
-  allChoices:{
+  allChoices: {
     flex: 3,
-    justifyContent: 'flex-start'
-    
+    justifyContent: "flex-start",
   },
 
   answerBox: {
@@ -50,7 +42,7 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     marginHorizontal: 20,
     marginTop: 5,
-    backgroundColor: '#84DCC6'
+    backgroundColor: "#84DCC6",
   },
 
   incorrectBox: {
@@ -59,14 +51,12 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     marginHorizontal: 20,
     marginTop: 5,
-    backgroundColor: '#FF7477'
+    backgroundColor: "#FF7477",
   },
 
   text: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginLeft: 5,
   },
- 
-
-})
+});

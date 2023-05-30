@@ -96,7 +96,7 @@ export default function MCQCard(props) {
         />
       </View>
 
-      {showEval ? <SelfEvaluation chooseLevel = {props.chooseLevel} nextCard = {props.nextCard}/> : null}
+      {showEval ? <SelfEvaluation nextCard={props.nextCard} /> : null}
     </LinearGradient>
   );
 }
