@@ -37,7 +37,7 @@ export default function LearnScreenMain() {
 
       {/* The Button used to jump to the card screen */}
       <View style={styles.button}>
-        <StartButton finished={false}/>
+        <StartButton finished={true}/>
       </View>
     </LinearGradient>
   );

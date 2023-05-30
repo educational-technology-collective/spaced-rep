@@ -3,7 +3,8 @@ import LearnScreenMain from "./LearnScreenMain";
 import LearnScreenCard from "./LearnScreenCard";
 import CardHeader from "../CardComponent/CardHeader";
 import { useState } from "react";
-
+import StatisticsScreen from "./StatisticsScreen";
+import StatisticsHeader from "../StatisticsComp/StatisticsHeader";
 export default function LearnScreen() {
   const Stack = createStackNavigator();
 
@@ -51,6 +52,12 @@ export default function LearnScreen() {
         component={LearnScreenCard}
         options={{ header: () => <CardHeader /> }}
         initialParams={{stats: stats, chooseLevel: {evaluationClick}}}
+      />
+      <Stack.Screen
+        name='StatisticsScreen'
+        component={StatisticsScreen}
+        options={{header: () => <StatisticsHeader />}}
+        initialParams={{stats: stats}}
       />
     </Stack.Navigator>
   );

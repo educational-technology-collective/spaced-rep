@@ -4,6 +4,7 @@ import MCQCard from "../CardComponent/MCQCard";
 import { cardCollection } from "../exampleData";
 import { useRoute } from '@react-navigation/native';
 import { useState } from "react";
+import { useNavigation } from "@react-navigation/native";
 
 export default function LearnScreenCard() {
   const route = useRoute();
@@ -15,7 +16,14 @@ export default function LearnScreenCard() {
     setCounter(counter + 1);
   }
 
+  if(counter === cardCollection.length)
+  {
+    const navigation = useNavigation();
+     return navigation.navigate("StatisticsScreen");
+  }
+
   let obj = cardCollection[counter];
+
 
   let component;
 
