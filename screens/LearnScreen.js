@@ -58,6 +58,7 @@ export default function LearnScreen() {
         component={StatisticsScreen}
         options={{header: () => <StatisticsHeader />}}
         initialParams={{stats: stats}}
+        back
       />
     </Stack.Navigator>
   );

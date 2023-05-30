@@ -2,12 +2,27 @@ import {View, Text, StyleSheet} from 'react-native'
 import { LinearGradient } from "expo-linear-gradient";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import IndicationBlock from '../StatisticsComp/IndicationBlock';
+import ReviewIndication from '../StatisticsComp/ReviewIndication';
+import { useEffect } from 'react';
 
 
 export default function StatisticsScreen()
 {
   const navigation = useNavigation();
   const route = useRoute();
+
+  useEffect(() => {
+    const { routes } = navigation.getState();
+
+    const filteredRoutes = routes.filter(
+      route => route.name !== 'LearnScreenCard',
+    );
+
+    navigation.reset({
+      index: filteredRoutes.length - 1,
+      routes: filteredRoutes,
+    });
+  }, [])
 
 //  navigation.navigate('LearnScreenMain');
 
@@ -16,38 +31,29 @@ export default function StatisticsScreen()
     style={styles.overall}
     colors={[
       "#0056D2",
+     
+     
       "white",
       "white",
       "white",
       "white",
       "white",
-      "white",
-      "white",
-      "white",
-      "white",
-      "white",
-      "white",
-      "white",
-      "white",
-      "white",
-      "white",
-      "white",
-      "white",
-      "white",
+     
+     
       "#0056D2",
     ]}
   >
     <View style = {styles.completeTextView}>
     <Text style = {styles.completeText}>You Have Completed</Text>
+    <Text></Text>
     </View> 
     <Text style = {styles.groupText}>
       <Text style = {styles.numberText}>{route.params.stats.finished}</Text>
       <Text style = {styles.cardText}> Cards</Text>
     </Text>
 
-    <View>
-      <Text>Review Indication: </Text>
-    <IndicationBlock />
+    <View style = {styles.indication}>
+      <ReviewIndication/>
     </View>
     </LinearGradient>
 
@@ -93,6 +99,11 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: '800',
     fontFamily: 'Verdana',
+  },
+
+  indication: {
+    flex: 2,
+    justifyContent: 'flex-start'
   }
 
 
