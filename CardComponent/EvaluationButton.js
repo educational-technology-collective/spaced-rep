@@ -10,24 +10,28 @@ export default function EvaluationButton(props) {
       case 0:
         stats.forgetNum++;
         stats.finished++;
-        navigation.setParams({ stats: stats });
+        if (stats.finished !== stats.total)
+          navigation.setParams({ stats: stats });
         break;
 
       case 1:
         stats.littleNum++;
         stats.finished++;
-        navigation.setParams({ stats: stats });
+        if (stats.finished !== stats.total)
+          navigation.setParams({ stats: stats });
         break;
       case 2:
         stats.muchNum++;
         stats.finished++;
-        navigation.setParams({ stats: stats });
+        if (stats.finished !== stats.total)
+          navigation.setParams({ stats: stats });
         break;
 
       case 3:
         stats.wellNum++;
         stats.finished++;
-        navigation.setParams({ stats: stats });
+        if (stats.finished !== stats.total)
+          navigation.setParams({ stats: stats });
         break;
     }
   }

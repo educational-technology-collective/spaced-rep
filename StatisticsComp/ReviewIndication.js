@@ -6,6 +6,10 @@ export default function ReviewIndication() {
   const route = useRoute();
   const stats = route.params.stats;
 
+  const redForget = stats.forgetNum >= stats.total / 4;
+  const redLittle = stats.littleNum >= stats.total / 4;
+  const redMuch = stats.littleNum < stats.total / 4;
+  const redWell = stats.wellNum < stats.total / 4;
   return (
     <View>
       <Text style={styles.text}>Review Indication: </Text>
@@ -15,14 +19,26 @@ export default function ReviewIndication() {
           emoji="🙁"
           text="You Forget"
           number={stats.forgetNum}
+          red={redForget}
         />
         <IndicationBlock
           emoji="😐"
           text="Know Little"
           number={stats.littleNum}
+          red={redLittle}
         />
-        <IndicationBlock emoji="😅" text="Know Much" number={stats.muchNum} />
-        <IndicationBlock emoji="😀" text="Know Well" number={stats.wellNum} />
+        <IndicationBlock
+          emoji="😅"
+          text="Know Much"
+          number={stats.muchNum}
+          red={redMuch}
+        />
+        <IndicationBlock
+          emoji="😀"
+          text="Know Well"
+          number={stats.wellNum}
+          red={redWell}
+        />
       </View>
     </View>
   );
