@@ -1,6 +1,12 @@
 import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Keyboard,
+} from "react-native";
 import SelfEvaluation from "./SelfEvaluation";
 import SeenTimesComp from "./SeenTimesComp";
 import InputBox from "./InputBox";
@@ -20,6 +26,7 @@ export default function QACard(props) {
       ? setText(props.obj.content.answer)
       : setText(props.obj.content.question);
     setIsQuestion(!isQuestion);
+    Keyboard.dismiss();
   }
 
   return (

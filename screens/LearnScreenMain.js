@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   top: {
-    flex: 1,
+    flex: 2,
     backgroundColor: "#0056D2",
   },
 
@@ -66,12 +66,12 @@ const styles = StyleSheet.create({
   },
 
   progressBar: {
-    flex: 4,
+    flex: 5,
     justifyContent: "center",
   },
 
   button: {
-    flex: 4,
+    flex: 5,
     justifyContent: "center",
   },
 });

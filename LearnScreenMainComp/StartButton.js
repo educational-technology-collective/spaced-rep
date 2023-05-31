@@ -27,7 +27,7 @@ export default function StartButton(props) {
   return (
     <TouchableOpacity onPress={statisticsHandler}>
       <View style={styles.button}>
-        <Text style={styles.text}>Today's Statistics</Text>
+        <Text style={styles.text}>Today's Summary</Text>
       </View>
     </TouchableOpacity>
   );
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    fontSize: 30,
+    fontSize: 28,
     fontWeight: "bold",
     color: "white",
   },

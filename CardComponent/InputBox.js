@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import { View, Text, StyleSheet, TextInput, Keyboard } from "react-native";
 import { useState } from "react";
 
 //Component For the TextInput box for QA or QAImg cards
@@ -6,10 +6,15 @@ export default function InputBox() {
   const [textLength, setLength] = useState(0);
 
   return (
-    <View style={styles.textInputBox}>
+    <View
+      style={styles.textInputBox}
+      onPress={() => {
+        Keyboard.dismiss();
+      }}
+    >
       <TextInput
         placeholder="Type Your Response"
-        multiline
+        multiline={true}
         onChangeText={(value) => {
           setLength(value.length);
         }}

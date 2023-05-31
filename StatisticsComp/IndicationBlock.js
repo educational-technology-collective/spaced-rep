@@ -14,13 +14,13 @@ export default function IndicationBlock(props) {
 
     textInside: {
       marginTop: 4,
-      fontSize: 15,
+      fontSize: 14,
       fontWeight: "500",
       padding: 2,
     },
     textEmoji: {
       marginTop: 4,
-      fontSize: 25, 
+      fontSize: 25,
       padding: 1,
     },
   });
