@@ -10,11 +10,13 @@ export default function MCQCard(props) {
 
   const [correctStyle, setCorrectStyle] = useState(correctStyles.answerBox);
 
+  //This helps setting the correctBox to green color when triggered
   function setCorrectFunc() {
     setEval(true);
     setCorrectStyle(correctStyles.correctBox);
   }
 
+  //Function to shuffle the choices of the array
   function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
       // Generate random number
@@ -30,6 +32,7 @@ export default function MCQCard(props) {
 
   const [randomArray, setRandomArray] = useState([]);
 
+  //This just makes the choices shuffle only once. And not change after clicking
   useEffect(
     function () {
       setRandomArray(shuffleArray(props.obj.content.answer));
@@ -37,7 +40,10 @@ export default function MCQCard(props) {
     [props.obj.content.answer]
   );
 
+  //Used DCBA twice because React Native renders the object twice
   const letterArray = ["D", "C", "B", "A", "D", "C", "B", "A"];
+
+  //Function that renders the components when using the FlatList
   function renderChoice(item) {
     return item.isCorrect ? (
       <CorrectCard
@@ -96,7 +102,8 @@ export default function MCQCard(props) {
         />
       </View>
 
-      {showEval ? <SelfEvaluation nextCard={props.nextCard} /> : null}
+      {/* This is to show the evaluation buttons after user made choice */}
+      {showEval ? <SelfEvaluation /> : null}
     </LinearGradient>
   );
 }

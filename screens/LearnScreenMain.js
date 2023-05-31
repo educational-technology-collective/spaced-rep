@@ -32,7 +32,7 @@ export default function LearnScreenMain() {
 
       {/* The Progress Bar Portion */}
       <View style={styles.progressBar}>
-        <ProgressBar number={stats.total - stats.finished} width={"60%"} />
+        <ProgressBar />
       </View>
 
       {/* The Button used to jump to the card screen */}

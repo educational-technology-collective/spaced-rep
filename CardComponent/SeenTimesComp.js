@@ -1,5 +1,6 @@
 import { View, Text, StyleSheet } from "react-native";
 
+//Component that displays the number of times the user has seen the card
 export default function SeenTimesComp(props) {
   return (
     <View style={styles.seenTimes}>

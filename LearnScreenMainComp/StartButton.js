@@ -3,14 +3,18 @@ import { useNavigation } from "@react-navigation/native";
 export default function StartButton(props) {
   const navigation = useNavigation();
 
+  //This handler will jump to learning cards when cards are not all finished
   function reviewCardHandler() {
     navigation.navigate("LearnScreenCard");
   }
 
+  //This handler will jump to statistics page when cards finished
   function statisticsHandler() {
     navigation.navigate("StatisticsScreen");
   }
 
+  //Conditional Statements that will decide whether the button should jump to
+  //cards or to the statistics page
   if (!props.finished) {
     return (
       <TouchableOpacity onPress={reviewCardHandler}>
@@ -44,6 +48,5 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "bold",
     color: "white",
-    fontFamily: "Times New Roman",
   },
 });

@@ -26,7 +26,7 @@ export default function App() {
             } else if (route.name === "Collaboration") {
               iconName = "users";
             } else if (route.name === "Profile") {
-              iconName = "user-secret";
+              iconName = "user";
             }
             return (
               <FontAwesome5

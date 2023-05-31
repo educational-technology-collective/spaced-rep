@@ -1,48 +1,51 @@
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { useRoute, useNavigation } from "@react-navigation/native";
+
+//This is the four individual evaluation buttons.
 export default function EvaluationButton(props) {
   const route = useRoute();
   const stats = route.params.stats;
   const navigation = useNavigation();
 
+  //Function that updates the statistics accordingly
   function evaluationClick(index) {
     switch (index) {
+      //When User Clicks Forget
       case 0:
         stats.forgetNum++;
         stats.finished++;
-        if (stats.finished !== stats.total)
-          navigation.setParams({ stats: stats });
+        navigation.setParams({ stats: stats });
         break;
 
+      //When User Clicks Little
       case 1:
         stats.littleNum++;
         stats.finished++;
-        if (stats.finished !== stats.total)
-          navigation.setParams({ stats: stats });
+        navigation.setParams({ stats: stats });
         break;
+
+      //When User Clicks Much
       case 2:
         stats.muchNum++;
         stats.finished++;
-        if (stats.finished !== stats.total)
-          navigation.setParams({ stats: stats });
+        navigation.setParams({ stats: stats });
         break;
 
+      //When User Clicks Well
       case 3:
         stats.wellNum++;
         stats.finished++;
-        if (stats.finished !== stats.total)
-          navigation.setParams({ stats: stats });
+        navigation.setParams({ stats: stats });
         break;
     }
   }
 
-  function onPressHandler() {
-    evaluationClick(props.index);
-    props.nextCard();
-  }
-
   return (
-    <TouchableOpacity onPress={onPressHandler}>
+    <TouchableOpacity
+      onPress={() => {
+        evaluationClick(props.index);
+      }}
+    >
       <View style={styles.buttonContainer}>
         <Text style={styles.text}>{props.text}</Text>
       </View>

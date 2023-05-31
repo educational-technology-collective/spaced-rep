@@ -9,7 +9,7 @@ export default function IndicationBlock(props) {
       width: 95,
       alignItems: "center",
       borderColor: "#0056D2",
-      backgroundColor: props.red ? "#FF7477" : "#84DCC6",
+      backgroundColor: props.red ? "#FF7477" : "#84DCC6", //This Depends on Props.red with given formula
     },
 
     textInside: {
@@ -20,6 +20,7 @@ export default function IndicationBlock(props) {
     },
   });
 
+  //Each Individual Indication Level Block
   return (
     <View style={styles.borderView}>
       <Text style={styles.textInside}>{props.emoji}</Text>

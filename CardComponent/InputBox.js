@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, TextInput } from "react-native";
 import { useState } from "react";
 
+//Component For the TextInput box for QA or QAImg cards
 export default function InputBox() {
   const [textLength, setLength] = useState(0);
 

@@ -5,6 +5,7 @@ import SelfEvaluation from "./SelfEvaluation";
 import SeenTimesComp from "./SeenTimesComp";
 import InputBox from "./InputBox";
 
+//The Question/Answer Card Component
 export default function QACard(props) {
   const [questionBoxText, setText] = useState(props.obj.content.question);
 
@@ -12,6 +13,7 @@ export default function QACard(props) {
 
   const [isQuestion, setIsQuestion] = useState(true);
 
+  //This triggers to flip between question text and answer text when pressed
   function flipCard() {
     setEval(true);
     isQuestion
@@ -57,9 +59,7 @@ export default function QACard(props) {
       <InputBox />
 
       {/* Component For the Four Levels of Indication Section */}
-      <View style={styles.modal}>
-        {showEval ? <SelfEvaluation nextCard={props.nextCard} /> : null}
-      </View>
+      <View style={styles.modal}>{showEval ? <SelfEvaluation /> : null}</View>
     </LinearGradient>
   );
 }

@@ -1,8 +1,11 @@
 import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
 import { useState } from "react";
 
+//This is the individual choices of Multiple Choice Question Card
 export default function MCQIndChoice(props) {
   const [boxStyle, setStyle] = useState(styles.answerBox);
+
+  //This will set the correct box to green and incorrect box to red based on choice
   function onPressHandler() {
     props.choiceHandler();
     if (props.isCorrect) {
@@ -11,6 +14,7 @@ export default function MCQIndChoice(props) {
       setStyle(styles.incorrectBox);
     }
   }
+
   return (
     <TouchableOpacity style={boxStyle} onPress={onPressHandler}>
       <Text style={styles.text}>

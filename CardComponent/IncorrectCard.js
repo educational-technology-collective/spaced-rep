@@ -1,6 +1,7 @@
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
 import { useState } from "react";
 
+//A separate component for the incorrectcard component. Just with Red Color when pressed
 export default function IncorrectCard(props) {
   const [boxStyle, setStyle] = useState(styles.answerBox);
   function onPressHandler() {

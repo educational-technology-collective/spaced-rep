@@ -21,19 +21,25 @@ export default function LearnScreen() {
 
   return (
     <Stack.Navigator>
-      {/* Stack Navigator that jumps to card screen from main screen */}
+      {/* Stack Navigator that jumps between screens */}
+
+      {/* Main Page, which is also the default page */}
       <Stack.Screen
         name="LearnScreenMain"
         component={LearnScreenMain}
         options={{ headerShown: false }}
         initialParams={{ stats: stats }}
       />
+
+      {/* Each Individual Card Page as you go through */}
       <Stack.Screen
         name="LearnScreenCard"
         component={LearnScreenCard}
         options={{ header: () => <CardHeader /> }}
         initialParams={{ stats: stats }}
       />
+
+      {/* The Statistics Page */}
       <Stack.Screen
         name="StatisticsScreen"
         component={StatisticsScreen}

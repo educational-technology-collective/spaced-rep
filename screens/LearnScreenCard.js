@@ -3,33 +3,31 @@ import QAImgCard from "../CardComponent/QAImgCard";
 import MCQCard from "../CardComponent/MCQCard";
 import { cardCollection } from "../exampleData";
 import { useRoute } from "@react-navigation/native";
-import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 
 export default function LearnScreenCard() {
   const route = useRoute();
+  const stats = route.params.stats;
 
-  const [counter, setCounter] = useState(0);
+  const navigation = useNavigation();
 
-  function moveCounter() {
-    setCounter(counter + 1);
+  //Navigate to the Statistics Page after finishing cards
+  //It prompts a warning that is not fixed yet.
+  if (stats.finished === stats.total) {
+    navigation.navigate("StatisticsScreen");
+    return;
   }
 
-  if (counter === cardCollection.length) {
-    const navigation = useNavigation();
-    return navigation.navigate("StatisticsScreen");
-  }
-
-  let obj = cardCollection[counter];
+  let obj = cardCollection[stats.finished];
 
   let component;
 
   if (obj.type === "qa") {
-    component = <QACard obj={obj} nextCard={moveCounter} />;
+    component = <QACard obj={obj} />;
   } else if (obj.type === "qaimg") {
-    component = <QAImgCard obj={obj} nextCard={moveCounter} />;
+    component = <QAImgCard obj={obj} />;
   } else {
-    component = <MCQCard obj={obj} nextCard={moveCounter} />;
+    component = <MCQCard obj={obj} />;
   }
 
   return component;

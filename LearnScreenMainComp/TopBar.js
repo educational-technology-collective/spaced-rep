@@ -1,6 +1,7 @@
-import { StyleSheet, Text} from "react-native";
+import { StyleSheet, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+//This is just the Very Top App Name Bar
 export default function TopBar() {
   return (
     <SafeAreaView style={styles.container} edges={["top", "left", "right"]}>

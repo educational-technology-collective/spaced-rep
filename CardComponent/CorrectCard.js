@@ -1,5 +1,6 @@
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
 
+//This is just the CorrectCard component that turns green when clicked
 export default function CorrectCard(props) {
   return (
     <TouchableOpacity

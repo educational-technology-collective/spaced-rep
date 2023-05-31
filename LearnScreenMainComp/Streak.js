@@ -1,5 +1,7 @@
 import FontAwesome5Icon from "react-native-vector-icons/FontAwesome5";
 import { Text, StyleSheet } from "react-native";
+
+//Not Used Currently
 export default function Streak(props) {
   return (
     <Text style={styles.texts}>

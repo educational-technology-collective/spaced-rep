@@ -8,9 +8,12 @@ import {
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import { useNavigation } from "@react-navigation/native";
 import { useRoute } from "@react-navigation/native";
-export default function CardHeader(props) {
+
+//The LearnScreenCard Header with Back Arrow and Numbert of Cards Finished
+export default function CardHeader() {
   const navigation = useNavigation();
   const route = useRoute();
+  const stats = route.params.stats;
   function backHandler() {
     navigation.navigate("LearnScreenMain");
   }
@@ -27,7 +30,7 @@ export default function CardHeader(props) {
       </View>
       <View style={styles.textView}>
         <Text style={styles.text}>
-          {route.params.stats.finished} / {route.params.stats.total} cards
+          {stats.finished} / {stats.total} cards
         </Text>
       </View>
     </SafeAreaView>
