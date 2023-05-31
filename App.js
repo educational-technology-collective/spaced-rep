@@ -8,6 +8,7 @@ import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 
 export default function App() {
   const Tab = createMaterialBottomTabNavigator();
+
   return (
     //This is the Container For the Whole App
     <NavigationContainer>
@@ -18,7 +19,7 @@ export default function App() {
         barStyle={{ backgroundColor: "#0056D2" }}
         screenOptions={({ route }) => ({
           //This is for the icons of each screen
-          tabBarIcon: ({ focused, color = "blue", size }) => {
+          tabBarIcon: ({ focused }) => {
             let iconName;
 
             if (route.name === "Learn") {
@@ -47,5 +48,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({});
