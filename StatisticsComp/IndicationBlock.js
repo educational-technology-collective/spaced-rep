@@ -18,12 +18,17 @@ export default function IndicationBlock(props) {
       fontWeight: "500",
       padding: 2,
     },
+    textEmoji: {
+      marginTop: 4,
+      fontSize: 25, 
+      padding: 1,
+    },
   });
 
   //Each Individual Indication Level Block
   return (
     <View style={styles.borderView}>
-      <Text style={styles.textInside}>{props.emoji}</Text>
+      <Text style={styles.textEmoji}>{props.emoji}</Text>
       <Text style={styles.textInside}>{props.text}</Text>
       <Text style={styles.textInside}>{props.number} cards</Text>
     </View>
