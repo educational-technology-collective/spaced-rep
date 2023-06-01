@@ -35,7 +35,7 @@ export default function LearnScreen() {
       <Stack.Screen
         name="LearnScreenCard"
         component={LearnScreenCard}
-        options={{ header: () => <CardHeader /> }}
+        options={{ header: () => <CardHeader />, gestureEnabled :false}}
         initialParams={{ stats: stats }}
       />
 
@@ -43,7 +43,7 @@ export default function LearnScreen() {
       <Stack.Screen
         name="StatisticsScreen"
         component={StatisticsScreen}
-        options={{ header: () => <StatisticsHeader /> }}
+        options={{ header: () => <StatisticsHeader />, gestureEnabled:false }}
         initialParams={{ stats: stats }}
         back
       />

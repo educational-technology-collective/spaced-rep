@@ -10,18 +10,19 @@ export default function StatisticsScreen() {
   const stats = route.params.stats;
 
   //This allows swipe back to the main page instead of a previous card
-  useEffect(() => {
-    const { routes } = navigation.getState();
+  //Not useful right now as swipe is disabled
+  // useEffect(() => {
+  //   const { routes } = navigation.getState();
 
-    const filteredRoutes = routes.filter(
-      (route) => route.name !== "LearnScreenCard"
-    );
+  //   const filteredRoutes = routes.filter(
+  //     (route) => route.name !== "LearnScreenCard"
+  //   );
 
-    navigation.reset({
-      index: filteredRoutes.length - 1,
-      routes: filteredRoutes,
-    });
-  }, []);
+  //   navigation.reset({
+  //     index: filteredRoutes.length - 1,
+  //     routes: filteredRoutes,
+  //   });
+  // }, []);
 
   return (
     <LinearGradient

@@ -49,7 +49,6 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   top: {
-    flex: 2,
     backgroundColor: "#0056D2",
   },
 

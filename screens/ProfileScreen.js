@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   top: {
-    flex: 1,
     backgroundColor: "#0056D2",
   },
 
