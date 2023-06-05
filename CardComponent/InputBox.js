@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TextInput, Keyboard } from "react-native";
+import { View, Text, StyleSheet, TextInput, Keyboard, KeyboardAvoidingView } from "react-native";
 import { useState } from "react";
 
 //Component For the TextInput box for QA or QAImg cards
@@ -6,6 +6,7 @@ export default function InputBox() {
   const [textLength, setLength] = useState(0);
 
   return (
+    <KeyboardAvoidingView style={{flex: 2}}>
     <View
       style={styles.textInputBox}
       onPress={() => {
@@ -24,12 +25,13 @@ export default function InputBox() {
       ></TextInput>
       <Text style={styles.charactersCount}>Characters: {textLength}/100</Text>
     </View>
+    </KeyboardAvoidingView>
   );
 }
 
 const styles = StyleSheet.create({
   textInputBox: {
-    flex: 2,
+    flex: 1,
     marginHorizontal: 20,
     marginTop: 30,
     marginBottom: 30,

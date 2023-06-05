@@ -75,7 +75,6 @@ const styles = StyleSheet.create({
   completeText: {
     fontSize: 30,
     fontWeight: "800",
-    fontFamily: "Verdana",
     alignSelf: "center",
     justifyContent: "center",
   },
@@ -83,7 +82,6 @@ const styles = StyleSheet.create({
   numberText: {
     fontSize: 30,
     fontWeight: "800",
-    fontFamily: "Verdana",
     textDecorationLine: "underline",
     color: "#0056D2",
   },
@@ -91,7 +89,6 @@ const styles = StyleSheet.create({
   cardText: {
     fontSize: 30,
     fontWeight: "800",
-    fontFamily: "Verdana",
   },
 
   indication: {

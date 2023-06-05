@@ -68,7 +68,6 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 16,
     fontWeight: "500",
-    fontFamily: "Verdana",
     padding: 5,
     color: "white",
   },

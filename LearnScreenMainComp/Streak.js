@@ -15,6 +15,5 @@ const styles = StyleSheet.create({
   texts: {
     fontSize: 30,
     fontWeight: "bold",
-    fontFamily: "Verdana",
   },
 });

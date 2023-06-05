@@ -5,6 +5,7 @@ import SeenTimesComp from "./SeenTimesComp";
 import SelfEvaluation from "./SelfEvaluation";
 import CorrectCard, { correctStyles } from "./CorrectCard";
 import IncorrectCard from "./IncorrectCard";
+import MCQNext from "./MCQNext";
 export default function MCQCard(props) {
   const [showEval, setEval] = useState(false);
 
@@ -103,7 +104,7 @@ export default function MCQCard(props) {
       </View>
 
       {/* This is to show the evaluation buttons after user made choice */}
-      {showEval ? <SelfEvaluation /> : null}
+      {showEval ? <MCQNext /> : null}
     </LinearGradient>
   );
 }
@@ -130,6 +131,6 @@ const styles = StyleSheet.create({
   allChoices: {
     flex: 3,
     justifyContent: "flex-start",
-    marginBottom: 15,
+    marginTop: 15,
   },
 });
