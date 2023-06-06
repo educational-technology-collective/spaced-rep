@@ -1,47 +1,52 @@
-import { SafeAreaView } from "react-native-safe-area-context";
-import TopBar from "../components/TopBar";
-import Streak from "../components/Streak";
-import ProgressBar from "../components/ProgressBar"
-import { StyleSheet, View, Text } from "react-native";
+import { createStackNavigator } from "@react-navigation/stack";
+import LearnScreenMain from "./LearnScreenMain";
+import LearnScreenCard from "./LearnScreenCard";
+import CardHeader from "../CardComponent/CardHeader";
+import { useState } from "react";
+import StatisticsScreen from "./StatisticsScreen";
+import StatisticsHeader from "../StatisticsComp/StatisticsHeader";
+import { cardCollection } from "../exampleData";
 
 export default function LearnScreen() {
+  const Stack = createStackNavigator();
+
+  const [stats, setStats] = useState({
+    total: cardCollection.length,
+    finished: 0,
+    forgetNum: 0,
+    littleNum: 0,
+    muchNum: 0,
+    wellNum: 0,
+  });
+
   return (
-    <View style={styles.container}>
-      <View style={styles.top}>
-        <TopBar />
-      </View>
+    <Stack.Navigator>
+      {/* Stack Navigator that jumps between screens */}
 
-      <View style = {styles.streak}>
-       <Streak number = {2} />
-      </View>
+      {/* Main Page, which is also the default page */}
+      <Stack.Screen
+        name="LearnScreenMain"
+        component={LearnScreenMain}
+        options={{ headerShown: false }}
+        initialParams={{ stats: stats }}
+      />
 
-      <View style = {styles.progressBar}>
-        <ProgressBar number={40}/>
-      </View>
-    </View>
+      {/* Each Individual Card Page as you go through */}
+      <Stack.Screen
+        name="LearnScreenCard"
+        component={LearnScreenCard}
+        options={{ header: () => <CardHeader />, gestureEnabled :false}}
+        initialParams={{ stats: stats }}
+      />
+
+      {/* The Statistics Page */}
+      <Stack.Screen
+        name="StatisticsScreen"
+        component={StatisticsScreen}
+        options={{ header: () => <StatisticsHeader />, gestureEnabled:false }}
+        initialParams={{ stats: stats }}
+        back
+      />
+    </Stack.Navigator>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column'
-  },
-  top: {
-    flex: 1,
-    backgroundColor: "#0056D2",
-  },
-
-  streak: {
-    flex: 4,
-    paddingTop: 20,
-    justifyContent: 'center',
-    alignItems:'center'
-  },
-
-  progressBar: {
-    flex: 5,
-    justifyContent: 'center'
-
-  }
-});

@@ -1,5 +1,7 @@
 import FontAwesome5Icon from "react-native-vector-icons/FontAwesome5";
-import { View, Text, StyleSheet } from "react-native";
+import { Text, StyleSheet } from "react-native";
+
+//Not Used Currently
 export default function Streak(props) {
   return (
     <Text style={styles.texts}>
@@ -13,6 +15,5 @@ const styles = StyleSheet.create({
   texts: {
     fontSize: 30,
     fontWeight: "bold",
-    fontFamily: "Verdana",
   },
 });
