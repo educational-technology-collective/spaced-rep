@@ -1,2 +1,3 @@
-This is for Spaced-Repetition App -- Haytham Tang# spaced-rep
-# spaced-rep
+Previous Development of the Space-Repetition App using React Native.
+
+--Haytham Tang
