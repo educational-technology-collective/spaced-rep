@@ -31,3 +31,7 @@ You will be given four options for a multiple choice question. You will click th
 
 ## Contact
 Yunxuan "Haytham" Tang —— [yunxuant@umich.edu](mailto:yunxuant@umich.edu)
+
+## Acknowledgement
+* [Prof. Christopher Brooks —— University of Michigan School of Information](https://www.si.umich.edu/people/christopher-brooks)
+* [Educational Technology Collective —— University of Michigan School of Information](https://edtech.labs.si.umich.edu/)
