@@ -9,13 +9,13 @@ This is a mobile-app for space-repetition learning. The app is built using React
 
 **Repo**: Clone the Repo into your local directory by running
 ```
-$ git clone https://github.com/educational-technology-collective/spaced-rep.git
+git clone https://github.com/educational-technology-collective/spaced-rep.git
 ```
 ## Run
 After you have set up the repo in your local directory. Run the following commands to try the app:
 ```
-$ cd spaced-rep
-$ npm start
+cd spaced-rep
+npm start
 ```
 It should automatically provide you with a list of commands to run the application as well as a QR-Code that you can use your device to scan and run. iPhone 13 ProMax is used for development
 
