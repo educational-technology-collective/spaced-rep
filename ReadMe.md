@@ -1,4 +1,4 @@
-# Space-Repetition-App(React Native)
+# Space-Repetition-App(React Native) | First Development Plan
 
 ## Description
 This is a mobile-app for space-repetition learning. The app is built using React Native. Currently, it includes two types of cards: QA(Question & Answer), QAImg(Question & Answer with Image) and MCQ(Multiple Choice Question).
